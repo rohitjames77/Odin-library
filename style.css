@@ -1,0 +1,127 @@
+body{
+    margin:0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgba(136, 250, 216, 0.595);
+}
+
+.head {
+    position:relative;
+background-color: rgba(246, 227, 103, 0.636);
+height : minmax(10%,15%);
+width: 100%;
+box-shadow:0px 5px rgba(0,0,0,0.3) ;
+display: flex;
+flex-direction: row;
+
+}
+.icon{
+    position: absolute;
+    height: 4rem;
+    top: 25%;
+    left: 2%;
+}
+
+.h1__title{
+    position: relative;
+    left:8%;
+    font-size: 3rem;
+    font-family:"Ubuntu", sans-serif;
+}
+.button{
+    
+    position: absolute;
+    top:30%;
+    right: 10%;
+    border: none;
+    width: 7rem;
+    height: 3rem;
+    font-family:"Ubuntu", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    background-color:  rgba(136, 250, 216, 0.378);
+}
+
+.button:hover{
+    background-color: rgb(214, 212, 212);
+    cursor:grab;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.501);
+}.icon:hover{
+    border: none;
+    border-radius: 3.8rem;
+    box-shadow:3px 3px 3px 3px rgba(128, 128, 128, 0.501) ;
+}
+.button:active{
+    background-color:rgba(128, 128, 128, 0.501);
+    color: white;
+}
+
+.foot{
+    position: absolute;
+    top: 95%;
+    left: 10%;
+    width: 80%;
+    height: 5%;
+    background-color: white;
+    border-radius: 5px 5px 15px 15px; 
+    box-shadow:3px 3px 3px 3px rgba(128, 128, 128, 0.501);
+}
+
+.Container__Book{
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    height:65% ;
+    width:80% ;
+    border-radius: 10px;
+    box-shadow:3px 3px 3px 3px rgba(128, 128, 128, 0.501);
+}
+
+.modal{
+    background-color:rgba(246, 227, 103, 0.564);
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    height: 60%;
+    width: 30%;
+    z-index: 1;
+    row-gap: 10px;
+    border-radius: 10px;
+}
+
+.greeting{
+    position:absolute;
+    top:3px;
+    margin: 0;
+left: 7%;
+font-family:"Ubuntu", sans-serif;
+}
+.greet-question{
+   position: absolute; 
+margin: 0;
+top: 15%;
+left: 15%;
+font-family:"Ubuntu", sans-serif;
+}
+.book-form{
+    
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    flex-wrap: wrap;
+    top: 25%;
+    left: 15%;
+    row-gap: 5px;
+    height: 90%;
+    width: 90%;
+    font-family:"Ubuntu", sans-serif;
+}
+
+input{
+    width: 70%;
+    border: none;
+}
+
