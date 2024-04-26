@@ -1,17 +1,33 @@
-function Book (title,pages,author){
+let library =[];
+let name = 0;
+
+function Book (title,author,pages,read){
 this.title = title,
+this.author = author,
 this.pages = pages,
-this.author = author
+this.read =read
 };
-let book1 = new Book('The Outsider', '100', 'Albert Camus');
-console.log(book1);
 
+let btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+  document.querySelector('.container').style.display ='block';
+})
+let cancel = document.querySelector('.cancel').addEventListener('click',()=> {
+    document.querySelector('.container').style.display ='none';
+});
 
-let modal= document.querySelector('modal');
-console.log(modal);
-let addBook = document.querySelector('button');
-console.log(addBook);
-addBook.addEventListener('click',createBook);
-function createBook(){
-   
+let formSubmit = document.querySelector('.submit');
+formSubmit.addEventListener('click',addBookToLibrary);
+function addBookToLibrary(){
+let title = document.querySelector('.input-title').value;
+let author = document.querySelector('.input-author').value;
+let pages  = document.querySelector('.input-pages').value;
+let read = document.querySelector('.input-read').value;
+console.log("title  " + title,'Author ' + author, 'Pages ' + pages,'read ' + read);
+
+console.log(new Book(title,author,pages,read));
+library.push(new Book);
+console.log(library.length);
 }
+
+
