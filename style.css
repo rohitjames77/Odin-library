@@ -79,13 +79,13 @@ flex-direction: row;
     box-shadow:3px 3px 3px 3px rgba(128, 128, 128, 0.501);
 }
 
-.modal{
+.container{
     background-color:rgba(246, 227, 103, 0.564);
-    display: block;
+    display:none;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 30%;
-    height: 60%;
+    height: 70%;
     width: 30%;
     z-index: 1;
     row-gap: 10px;
@@ -94,7 +94,7 @@ flex-direction: row;
 
 .greeting{
     position:absolute;
-    top:3px;
+    top:10px;
     margin: 0;
 left: 7%;
 font-family:"Ubuntu", sans-serif;
@@ -121,7 +121,59 @@ font-family:"Ubuntu", sans-serif;
 }
 
 input{
+    margin-left:2%;
     width: 70%;
+    height: 1.5rem;
     border: none;
+    border-radius: 2rem;
+}
+label{
+    margin-left: 3%;
 }
 
+.submit{
+position: absolute;
+top: 80%;
+left: 10%;
+border:none;
+font-family:"Ubuntu", sans-serif;;
+background-color:rgba(136, 250, 216, 0.378);
+font-weight: 700;
+width: 7rem;
+height: 3rem;
+border-radius: 2rem;
+font-size: 1.2rem;
+}
+.cancel{
+position: absolute;
+top: 80%;
+left: 60%;
+border: none;
+font-family: "Ubuntu", sans-serif;
+font-weight: 700;
+background-color: rgba(136, 250, 216, 0.378);
+width: 7rem;
+height: 3rem;
+border-radius: 2rem;
+font-size: 1.2rem;
+}
+
+.submit:hover{
+    background-color: rgb(214, 212, 212);
+    cursor:grab;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.501);    
+}
+.submit:active{
+    background-color:rgba(128, 128, 128, 0.501);
+    color: white;
+}
+
+.cancel:hover{
+    background-color: rgb(214, 212, 212);
+    cursor:grab;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.501);
+}
+.cancel:active{
+    background-color:rgba(128, 128, 128, 0.501);
+    color: white;
+}
