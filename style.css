@@ -68,7 +68,7 @@ flex-direction: row;
     box-shadow:3px 3px 3px 3px rgba(128, 128, 128, 0.501);
 }
 
-.Container__Book{
+.Book-Container{
     background-color: white;
     position: absolute;
     top: 25%;
@@ -77,6 +77,19 @@ flex-direction: row;
     width:80% ;
     border-radius: 10px;
     box-shadow:3px 3px 3px 3px rgba(128, 128, 128, 0.501);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(2,1fr);
+}
+
+.book-card{
+background: #1D976C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+height: 200px;
+width: 175px;
+border-radius: 10px;
 }
 
 .container{
