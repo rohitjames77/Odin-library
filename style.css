@@ -73,7 +73,7 @@ flex-direction: row;
     position: absolute;
     top: 25%;
     left: 10%;
-    height:65% ;
+    height:70% ;
     width:80% ;
     border-radius: 10px;
     box-shadow:3px 3px 3px 3px rgba(128, 128, 128, 0.501);
@@ -86,8 +86,8 @@ flex-direction: row;
     background: #fffc00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffffff, #fffc00);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-height: 200px;
-width: 175px;
+height: 175px;
+width: 150px;
 border-radius: 10px;
 border-left: 10px solid #ba8b02;
 margin:1%;
