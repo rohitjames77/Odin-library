@@ -83,6 +83,7 @@ flex-direction: row;
 }
 
 .bookCard{
+
     background: #fffc00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffffff, #fffc00);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
@@ -92,7 +93,16 @@ border-radius: 10px;
 border-left: 10px solid #ba8b02;
 margin:1%;
 box-shadow:3px 3px 3px 3px rgba(128, 128, 128, 0.501);
+    font-family:"Ubuntu", sans-serif;
+    font-size: 1rem;
+    text-align: justify;
 }
+
+.cardContent{
+    height: 60%;
+    width: 20%;
+}
+
 
 .formContainer{
     background-color:rgba(246, 227, 103, 0.564);
@@ -128,7 +138,7 @@ font-family:"Ubuntu", sans-serif;
     flex-direction: column;
     flex-wrap: wrap;
     top: 25%;
-    left: 15%;
+    left: 20%;
     row-gap: 5px;
     height: 90%;
     width: 90%;
@@ -189,6 +199,47 @@ font-size: 1.2rem;
     box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.501);
 }
 .cancel:active{
+    background-color:rgba(128, 128, 128, 0.501);
+    color: white;
+}
+
+#readBtn {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 3%;
+height: 1.2rem;
+width: 3.5rem;
+border: none;
+border-radius: 25%;
+ background-color: #ba8b02;
+ color: rgba(255, 255, 255, 0.876);
+font-family: "ubuntu",sans-serif;
+font-size: 1rem;
+}
+
+
+#deleteBtn {
+    display:none;
+    position: absolute;
+    top: 35%;
+    left: 14%;
+    border: none;
+    border-radius: 25%;
+    color: rgba(255, 255, 255, 0.876);
+background-color:  #ba8b02;
+font-family: "ubuntu",sans-serif;
+font-size: 1rem;
+}
+
+#readBtn:active{
+    background-color:rgba(128, 128, 128, 0.501);
+    color: white;
+}
+
+
+
+#deleteBtn:active{
     background-color:rgba(128, 128, 128, 0.501);
     color: white;
 }

@@ -1,5 +1,8 @@
+// Global Values....................................................
+
 let library =[];
 
+// Book Object Constructor..............................................
 function Book (title,author,pages){
 this.title = title,
 this.author = author,
@@ -17,7 +20,7 @@ let cancel = document.querySelector('.cancel').addEventListener('click',()=> {
 // Form Submit Button Function ..................................................... 
 let formSubmit = document.querySelector('.submit');
 formSubmit.addEventListener('click',addBookToLibrary);
-function addBookToLibrary(){
+function addBookToLibrary(){    //On event click this function takes values form input tags and store it in book Object and push that object into library array. 
 let input = document.querySelector('.input');
   if(input.value.length != 0){
 let title = document.querySelector('.input-title').value;
@@ -32,22 +35,51 @@ document.querySelector('.formContainer').style.display ='none';
 
 }
 
+function extractObjValue(){   // returns  all last pushed object values ........... 
+  let latestObj = library[library.length-1];
+  let value = Object.values(latestObj).join('');
+  console.log(value);
+  
+  return value;
+  }
+
 formSubmit.addEventListener('click',createCard);
-function createCard(){
+function createCard(){ //It create empty bookCard and buttons inside book container and append object Value from latest input.
   let bookDiv = document.createElement('div');   
   bookDiv.className = 'bookCard';
   document.querySelector('.bookContainer').appendChild(bookDiv);  
+  let objValue=extractObjValue();
+   bookDiv.textContent = objValue;
+   let readBtn = document.getElementById('readBtn');
+   readBtn.style.display = 'block';
+  let deleteBtn = document.getElementById('deleteBtn');
+  deleteBtn.style.display = 'block';
+
   }
 
-  formSubmit.addEventListener('click',appendTextValue);
-function  appendTextValue (){
-library.forEach(obj => {
-  let value = Object.values(obj);
-  console.log(` Value ${value}`);
-  let bookDiv = document.querySelector('.bookCard');
-  bookDiv.textContent = value; 
-});
+  let click =0;
+  let readStatus = document.getElementById('readBtn');
+readStatus.addEventListener('click',()=>{
+  readStatus.textContent = 'UnRead';
+    click++;
+    console.log(click);
+    if (click % 2 === 0){
+      readStatus.textContent = 'Read';
+    } 
+  })
 
-}
+
+  let deleteStatus = document.getElementById('deleteBtn');
+  deleteStatus.addEventListener('click',()=> {
+    let book = document.querySelector('.bookCard');
+    let btn1 = document.getElementById('readBtn');
+    let btn2 = document.getElementById('deleteBtn');  
+        book.parentNode.removeChild(book);
+        btn1.parentNode.removeChild(btn1);
+        btn2.parentNode.removeChild(btn2);
+        
+  })
+
+
 
 
