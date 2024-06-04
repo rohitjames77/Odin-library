@@ -3,20 +3,21 @@
 let library =[];
 
 // Book Object Constructor..............................................
-function Book (title,author,pages){
+class Book{
+ constructor(title,author,pages){
 this.title = title,
 this.author = author,
 this.pages = pages
+}
+addBookToLibrary(){
+  
+}
 };
 //Add Book Button Function ....................................
 let btn = document.querySelector('button');
 btn.addEventListener('click', () => {
   document.querySelector('.formContainer').style.display ='block';
 })
-// Form Cancel Button Function..................................................
-let cancel = document.querySelector('.cancel').addEventListener('click',()=> {
-  document.querySelector('.formContainer').style.display ='none';
-});
 // Form Submit Button Function ..................................................... 
 let formSubmit = document.querySelector('.submit');
 formSubmit.addEventListener('click',addBookToLibrary);
