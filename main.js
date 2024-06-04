@@ -9,9 +9,6 @@ this.title = title,
 this.author = author,
 this.pages = pages
 }
-addBookToLibrary(){
-  
-}
 };
 //Add Book Button Function ....................................
 let btn = document.querySelector('button');
